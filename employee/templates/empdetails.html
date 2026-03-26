@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+</head>
+<body>
+    <h1>Employee Details</h1>
+    {% if count > 0 %}
+    <h2>Fetched {{count}} employee details</h2>
+    {% else %}
+    <h2> No Records Available </h2>
+    {% endif %}
+    <h2>All records displayed below</h2>
+    {{records}}
+</body>
+</html>
