@@ -13,6 +13,11 @@
     <h2> No Records Available </h2>
     {% endif %}
     <h2>All records displayed below</h2>
-    {{records}}
+    <table border="1">
+        <tr><th>Name</th><th>Salary</th></tr>
+        {% for emp in records %}
+        <tr><td>{{emp.name}}</td><td>{{emp.salary}}</td></tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
