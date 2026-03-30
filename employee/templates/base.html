@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMS</title>
+    <style>
+        body{background-color:lightcyan}
+        nav{
+            list-style: none;
+            background-color: rgb(241, 241, 145);
+        }
+        nav ul{
+            display: flex;
+            justify-content: space-around;
+        }
+        nav ul li {
+            display: block;
+            padding: 10px;
+        }
+        li a{
+            text-decoration: none;
+            color:red
+        }
+        ul li:hover{
+            background-color: lightgreen;
+        }
+        footer{
+            text-align:center;
+            background-color: rgb(241, 241, 145);
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/emplist">Employees</a></li>
+        </ul>
+    </nav>
+    {% block content %}
+    <!--Actual Content is from Child Template-->
+    {% endblock %}
+    <footer>
+        All rights reserved &copy hmg 2025
+    </footer>
+</body>
+</html>

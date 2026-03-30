@@ -1,21 +1,8 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <style>
-        body
-        {
-            background-color: lightskyblue;
-        }
-    </style>
-</head>
-<body>
+{% block content %}
     <h1>Home Page</h1>
     <img src="{% static 'images/banner.png' %}" alt="Home Banner" width="700px">
     <h2>Dummy Content</h2>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In qui veritatis cum magnam, mollitia, officiis asperiores ipsum laudantium dolore similique perferendis obcaecati debitis id minus assumenda dolores eligendi! Aspernatur, quis!</p>
-</body>
-</html>
+{% endblock %}
