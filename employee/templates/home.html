@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,10 +14,7 @@
 </head>
 <body>
     <h1>Home Page</h1>
-    <table border="1">
-        <tr><th>Name</th><th>Age</th></tr>
-        <tr><td>ABC</td><th>33</th></tr>
-    </table>
+    <img src="{% static 'images/banner.png' %}" alt="Home Banner" width="700px">
     <h2>Dummy Content</h2>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In qui veritatis cum magnam, mollitia, officiis asperiores ipsum laudantium dolore similique perferendis obcaecati debitis id minus assumenda dolores eligendi! Aspernatur, quis!</p>
 </body>
