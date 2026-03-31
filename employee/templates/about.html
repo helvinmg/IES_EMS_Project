@@ -1,20 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Page</title>
-    <style>
-        body
-        {
-            background-color: lightgrey
-        }
-    </style>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %} About Page {% endblock %}
+{% block content %}
+{% include 'partials/offer.html' %}
     <h1>About Page</h1>
     <h2>Image will come here</h2>
-    <h2>Dummy Content</h2>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. In qui veritatis cum magnam, mollitia, officiis asperiores ipsum laudantium dolore similique perferendis obcaecati debitis id minus assumenda dolores eligendi! Aspernatur, quis!</p>
-</body>
-</html>
+{% endblock %}

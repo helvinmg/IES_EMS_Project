@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %} Managers {% endblock %}
+{% block content %}
+    <table border="1">
+        <tr><th>Name</th><th>Team Name</th><th>Salary</th><th>Reportee Count</th></tr>
+        {% for manager in records %}
+        <tr><td>{{manager.name}}</td>
+            <td>{{manager.teamname}}</td>
+            <td>{{manager.salary}}</td>
+            <td>{{manager.reporteecount}}</td></tr>
+        {% endfor %}
+    </table>
+{% endblock %}

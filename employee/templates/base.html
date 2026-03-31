@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMS</title>
+    <title>{% block title %} {% endblock %}</title>
     <style>
-        body{background-color:lightcyan}
+        #offer
+        {
+            background-color: lightgreen;
+            border: red solid 10px;
+        }
+        body{background-color:lightyellow}
         nav{
             list-style: none;
-            background-color: rgb(241, 241, 145);
+            background-color: lightgrey;
         }
         nav ul{
             display: flex;
@@ -27,7 +32,7 @@
         }
         footer{
             text-align:center;
-            background-color: rgb(241, 241, 145);
+            background-color: lightgrey;
             padding: 10px;
         }
     </style>
@@ -39,10 +44,15 @@
             <li><a href="/about">About</a></li>
             <li><a href="/contact">Contact</a></li>
             <li><a href="/emplist">Employees</a></li>
+            <li><a href="/managerlist">Managers</a></li>
         </ul>
     </nav>
     {% block content %}
-    <!--Actual Content is from Child Template-->
+    <!--the blocked named content is reserved for child-->
+    {% endblock %}
+    <!-- <h1 style="color:red">Common Content</h1> -->
+    {% block content2 %}
+    <!--Extra Content is from Child Template-->
     {% endblock %}
     <footer>
         All rights reserved &copy hmg 2025

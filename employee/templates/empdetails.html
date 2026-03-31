@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Details</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block title %} Employees {% endblock %}
+{% block content %}
     <h1>Employee Details</h1>
     {% if count > 0 %}
     <h2>Fetched {{count}} employee details</h2>
@@ -14,10 +9,11 @@
     {% endif %}
     <h2>All records displayed below</h2>
     <table border="1">
-        <tr><th>Name</th><th>Salary</th></tr>
+        <tr><th>Name</th><th>Desg</th><th>Salary</th></tr>
         {% for emp in records %}
-        <tr><td>{{emp.name}}</td><td>{{emp.salary}}</td></tr>
+        <tr><td>{{emp.name}}</td>
+            <td>{{emp.desg}}</td>
+            <td>{{emp.salary}}</td></tr>
         {% endfor %}
     </table>
-</body>
-</html>
+{% endblock %}
