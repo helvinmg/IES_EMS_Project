@@ -1,41 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %} {% endblock %}</title>
-    <style>
-        #offer
-        {
-            background-color: lightgreen;
-            border: red solid 10px;
-        }
-        body{background-color:lightyellow}
-        nav{
-            list-style: none;
-            background-color: lightgrey;
-        }
-        nav ul{
-            display: flex;
-            justify-content: space-around;
-        }
-        nav ul li {
-            display: block;
-            padding: 10px;
-        }
-        li a{
-            text-decoration: none;
-            color:red
-        }
-        ul li:hover{
-            background-color: lightgreen;
-        }
-        footer{
-            text-align:center;
-            background-color: lightgrey;
-            padding: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
 </head>
 <body>
     <nav>

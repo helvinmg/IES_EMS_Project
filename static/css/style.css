@@ -1,0 +1,60 @@
+ #offer
+        {
+            background-color: lightgreen;
+            border: red solid 10px;
+        }
+        body{
+            padding: 0px;
+            background-color:lightyellow
+        }
+        nav{
+            list-style: none;
+            background-color: lightgrey;
+        }
+        nav ul{
+            display: flex;
+            justify-content: space-around;
+        }
+        nav ul li {
+            display: block;
+            padding: 10px;
+        }
+        li a{
+            text-decoration: none;
+            color:red
+        }
+        ul li:hover{
+            background-color: lightgreen;
+        }
+        footer{
+            position: absolute;
+            width: 98%;
+            bottom:0;
+            color:red;
+            text-align:center;
+            background-color: lightgrey;
+            padding: 10px;
+        }
+
+        table{
+            border: darkblue solid 5px;
+            font-size: 1.2rem;
+            border-collapse: collapse;
+            width: 50%;
+            text-align: center;;
+        }
+        table tr th{
+            background-color: lightpink;
+        }
+        table tr td{
+            background-color: lightblue;
+        }
+
+        .del-btn
+        {
+            text-decoration: none;
+            color:white;
+            background-color: red;
+            border:blue solid 1px;
+            border-radius: 5px;
+        }

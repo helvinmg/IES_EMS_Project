@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from .models import Employee,Manager
 # Create your views here.
@@ -22,3 +22,9 @@ def emplist(request):
 def managerlist(request):
     records=Manager.objects.all()
     return render(request,'managerdetails.html',{'records':records})
+
+def empdelete(request,id):
+    print("deleteing ",id)
+    record=Employee.objects.get(id=id)
+    record.delete()
+    return redirect("emplist")

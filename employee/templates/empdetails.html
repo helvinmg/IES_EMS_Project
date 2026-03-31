@@ -9,11 +9,14 @@
     {% endif %}
     <h2>All records displayed below</h2>
     <table border="1">
-        <tr><th>Name</th><th>Desg</th><th>Salary</th></tr>
+        <tr><th>Name</th><th>Desg</th><th>Salary</th><th>Action</th></tr>
         {% for emp in records %}
-        <tr><td>{{emp.name}}</td>
+        <tr>
+            <td>{{emp.name}}</td>
             <td>{{emp.desg}}</td>
-            <td>{{emp.salary}}</td></tr>
+            <td>{{emp.salary}}</td>
+            <td><a class="del-btn" href="/delete/{{emp.id}}">Delete</a></td>
+        </tr>
         {% endfor %}
     </table>
 {% endblock %}
