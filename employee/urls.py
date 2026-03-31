@@ -10,5 +10,6 @@ urlpatterns = [
     path('emplist',views.emplist,name="emplist"),
     path('managerlist',views.managerlist),
     path('delete/<int:id>',views.empdelete),
+    path('emp/add',views.empcreate)
     #dynamic route which recceives id of emp
 ]

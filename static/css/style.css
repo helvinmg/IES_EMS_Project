@@ -58,3 +58,15 @@
             border:blue solid 1px;
             border-radius: 5px;
         }
+
+         .add-btn
+        {
+            margin: 20px;
+            text-decoration: none;
+            width: 200px;
+            padding: 10px;
+            color:white;
+            background-color: green;
+            border:red solid 1px;
+            border-radius: 5px;
+        }
