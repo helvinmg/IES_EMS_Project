@@ -41,3 +41,16 @@ def empcreate(request):
             return redirect("emplist")
         else:
             return render(request,'empcreate.html',{'form':form})
+        
+def empupdate(request,id):
+    if request.method=="GET":
+        record=Employee.objects.get(id=id)
+        form=EmployeeForm(instance=record)
+        return render(request,'empupdate.html',{'form':form})
+    else:
+        form=EmployeeForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("emplist")
+        else:
+            return render(request,'empupdate.html',{'form':form})
