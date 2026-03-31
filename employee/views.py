@@ -43,7 +43,9 @@ def empcreate(request):
             return render(request,'empcreate.html',{'form':form})
         
 def empupdate(request,id):
-    record=Employee.objects.get(id=id)
+    record=Employee.objects.filter(id=id).first()
+    if record is None:
+        return HttpResponse("No record found with id "+str(id))
     if request.method=="GET":
         form=EmployeeForm(instance=record)
         return render(request,'empupdate.html',{'form':form})
